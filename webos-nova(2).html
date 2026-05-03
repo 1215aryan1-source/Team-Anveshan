@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="Screenshot 2026-05-03 105821.png" type="image/x-icon">
+  <link rel="stylesheet" href="webos-nova(2).css">
+  <link rel="ja" href="">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WebOS Nova</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- login  -->
+<div id="login-screen">
+  <div class="login-bg-orb orb1"></div>
+  <div class="login-bg-orb orb2"></div>
+  <div class="login-bg-orb orb3"></div>
+  <div class="login-card">
+    <div class="os-logo">
+      <div class="logo-icon">✦</div>
+      <h1>WebOS Nova</h1>
+      <p>Personal Workspace</p>
+    </div>
+    <div class="avatar-circle">👤</div>
+    <div class="user-name">Welcome back, Anveshan</div>
+    <input class="login-input" type="password" id="password-input" placeholder="Enter password" autocomplete="off" />
+    <div class="login-error" id="login-error"></div>
+    <button class="login-btn" id="login-btn">Sign In →</button>
+    <div class="login-hint">Hint: try "1234" or "anveshan"</div>
+    <div class="boot-spinner">
+      <div class="boot-dot"></div><div class="boot-dot"></div><div class="boot-dot"></div>
+    </div>
+  </div>
+</div>
+
+<!-- desktop  -->
+<div id="desktop">
+  <div class="wallpaper-orb wo1"></div>
+  <div class="wallpaper-orb wo2"></div>
+
+  <div id="topbar">
+    <div class="topbar-left">
+      <span class="topbar-apple">✦ Nova</span>
+      <span class="topbar-menu">File</span>
+      <span class="topbar-menu">Edit</span>
+      <span class="topbar-menu">View</span>
+    </div>
+    <div class="topbar-right">
+      <span style="font-size:12px;color:rgba(255,255,255,0.5)">🔋 100%</span>
+      <span style="font-size:12px;color:rgba(255,255,255,0.5)">📶</span>
+      <span class="topbar-clock" id="clock">--:--</span>
+    </div>
+  </div>
+
+  <div class="desktop-icons">
+    <div class="desktop-icon" onclick="openApp('browser')">
+      <div class="icon-img">🌐</div>
+      <div class="icon-label">Browser</div>
+    </div>
+    <div class="desktop-icon" onclick="openApp('files')">
+      <div class="icon-img">📁</div>
+      <div class="icon-label">Files</div>
+    </div>
+    <div class="desktop-icon" onclick="openApp('notes')">
+      <div class="icon-img">📝</div>
+      <div class="icon-label">Notes</div>
+    </div>
+  </div>
+
+  <div id="window-container"></div>
+
+  <div id="taskbar">
+    <button class="dock-btn" onclick="openApp('terminal')"><span>💻</span><div class="dock-tooltip">Terminal</div></button>
+    <button class="dock-btn" onclick="openApp('browser')"><span>🌐</span><div class="dock-tooltip">Browser</div></button>
+    <button class="dock-btn" onclick="openApp('notes')"><span>📝</span><div class="dock-tooltip">Notes</div></button>
+    <button class="dock-btn" onclick="openApp('music')"><span>🎵</span><div class="dock-tooltip">Music</div></button>
+    <button class="dock-btn" onclick="openApp('files')"><span>📁</span><div class="dock-tooltip">Files</div></button>
+    <div class="dock-separator"></div>
+    <button class="dock-btn" onclick="lockScreen()"><span>🔒</span><div class="dock-tooltip">Lock</div></button>
+  </div>
+</div>
+<script src="webos-nova(2).js"></script>
+
+</body>
+</html>
